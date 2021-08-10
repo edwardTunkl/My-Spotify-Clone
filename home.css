@@ -1,0 +1,299 @@
+body {
+  background: #121212;
+}
+
+#mainBody {
+  display: flex;
+  align-items: stretch;
+  background: linear-gradient(
+    180deg,
+    transparent 5%,
+    #121212 33%,
+    #121212 100%
+  );
+}
+
+#navbar-pagecontent {
+  width: 100%;
+  margin-left: 250px;
+}
+
+.navbarButtons {
+  color: white;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 32px;
+  width: 32px;
+  margin-left: 1rem;
+}
+
+.navbarDropdown {
+  color: white;
+  border-radius: 23px;
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 32px;
+}
+#nullDiv {
+  background: linear-gradient(
+    180deg,
+    transparent 5%,
+    #121212 33%,
+    #121212 100%
+  );
+  height: 100%;
+  width: 100%;
+  max-width: 100% !important;
+}
+#navbar-pagecontent {
+  background: #3a0505;
+  min-height: 100vh;
+}
+.selctedSidebarItem {
+  color: white !important;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+#sidebar li a div {
+  pointer-events: none;
+}
+
+#sidebar {
+  background-color: rgb(0, 0, 0);
+  min-width: 250px;
+  min-height: 100vh;
+  z-index: 99;
+}
+
+#spotifyLogo {
+  width: 125px;
+  margin: 15px 0 15px 20px;
+}
+
+#sidebar > ul > li > a {
+  color: #b3b3b3;
+}
+
+hr.sidebarHr {
+  color: #b3b3b3;
+  background-color: #282828;
+  border: none;
+  height: 1px;
+  min-height: 1px;
+}
+
+#sidebar .nav-link {
+  padding: 0 24px;
+  margin: 0;
+}
+
+#sidebar .nav-item {
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar > h5 {
+  padding: 0;
+  margin: 0;
+}
+
+#sidebar > ul > li > a:hover {
+  color: white !important;
+}
+
+.sidebarContainer {
+  height: 24px;
+  width: 150px;
+}
+
+#sidebar > ul > li.nav-item > a {
+  padding-bottom: 8px;
+  padding-top: 8px;
+}
+
+#sidebar > ul > li:nth-child(3) {
+  padding-bottom: 42px;
+}
+
+.sideBarIconContainer {
+  display: flex;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  margin-right: 1rem;
+}
+
+li a div h5 {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.navbar {
+  width: 100%;
+}
+
+.navUserName {
+  width: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#player {
+  height: 60px;
+  background-color: #181818;
+  z-index: 100;
+}
+#player-album-image {
+  height: 40px;
+}
+.player-album-image-container {
+  display: flex;
+  height: 60px;
+  align-items: center;
+}
+.player-album {
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+.player-artist {
+  font-size: 10px;
+  color: #b3b3b3;
+}
+.icon-size-player {
+  font-size: 0.7rem;
+  color: #b3b3b3;
+}
+.icons-player-album {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+  color: #b3b3b3;
+}
+.icons-player-middle {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+}
+.timeline-player {
+  display: flex;
+  justify-content: center;
+}
+
+.icons-player-right {
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+.player-column {
+}
+
+#musicBarContainer {
+  margin-top: 0;
+  display: flex;
+}
+.timeline-time {
+  color: #b3b3b3;
+  font-size: 8px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 36px;
+}
+div#timeline {
+  width: 400px;
+  height: 3px;
+  background: gray;
+  display: block;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+div#progress {
+  width: 40px;
+  height: 2px;
+  background: white;
+}
+div#volume {
+  min-width: 60px;
+  height: 3px;
+  margin-left: 5px;
+  background: white;
+  display: block;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+#bohemianRapsody-albumCover {
+  max-width: 230px;
+}
+
+.cardText {
+  width: 100;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.cardSubTitle {
+  padding: 0%;
+  margin-bottom: 0.5;
+}
+.cardHorizontal {
+  background: #443d3e4f;
+  color: white;
+  padding-left: 0;
+  transition: width 2s;
+}
+.cardHorizontal:hover {
+  width: 275px;
+}
+.cardVertical {
+  background: #443d3e3d;
+  position: relative;
+  padding: 10px;
+  color: white;
+  max-width: 100% !important;
+  position: relative;
+  transform: scale(1);
+  transition: transform 0.3s ease-out;
+  transform: translateX(-10px);
+}
+.cardVertical:hover {
+  transform: scale(1.2);
+  z-index: 9;
+  background: #0f0f0f;
+  max-width: 100%;
+}
+.cardVertical:hover .verticalCardHoverBody {
+  transform: translateY(-3rem);
+  opacity: 1;
+  pointer-events: initial;
+  background: #0f0f0f;
+  padding: 0% !important;
+}
+.verticalCardHoverBody {
+  position: absolute;
+  transform: translateY(-3.3rem);
+  opacity: 0;
+  /* transition: opacity 0.3s ease, transform 0.3s ease; */
+  transition: all 0.3s ease;
+  overflow: hidden;
+  pointer-events: none;
+
+  padding-right: 3px !important;
+}
+.contentHover {
+  background: #0f0f0f;
+
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+}

@@ -1,0 +1,681 @@
+<!doctype html>
+<html lang="en">
+<head>
+        <meta charset="utf-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com/" />
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="spotify.css">
+        <title>Spotify Clone</title>
+</head>
+<body>
+    <div id="mainBody" class="d-flex">
+      <div id="sidebar" class="position-fixed px-1"> 
+        <img src="/assets/spotify-icons-logos/spotify-icons-logos/logos/01_RGB/02_PNG/Spotify_Logo_RGB_White.png" class="img-fluid" alt="" id="spotifyLogo">
+        <ul class="nav flex-column">
+            <li class="nav-item pt-1">
+                <a class="nav-link  selctedSidebarItem" onclick="changeSidebarSelected(event)" href="/homepage.html">
+                  <div class="d-flex sidebarContainer">
+                    <div class="sideBarIconContainer"><i class="bi bi-house-door"></i></div>
+                    <h5>Home</h5>
+                  </div>
+                </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" onclick="changeSidebarSelected(event)" href="#">
+                <div class="d-flex sidebarContainer">
+                  <div class="sideBarIconContainer"><i class="bi bi-search"></i></div>
+                  <h5>Search</h5>
+                </div>
+              </a>
+            </li>
+            <li class="nav-item">                  
+              <a class="nav-link" onclick="changeSidebarSelected(event)" href="#">
+                <div class="d-flex sidebarContainer">
+                  <div class="sideBarIconContainer"><i class="bi bi-book"></i></div>
+                  <h5 class="d-inline">Your Library</h5>
+                </div>
+              </a>
+            </li>
+            <li class="nav-item">                  
+              <a class="nav-link" href="#">
+                <div class="d-flex sidebarContainer">
+                  <div class="sideBarIconContainer" style="background:#b3b3b3; width:24px; height:24px;"><h5 class="d-inline"><i class="bi bi-plus" style="color:black;"></i></div>
+                  <h5 class="d-inline">Create Playlist</h5>
+                </div>
+              </a>
+            </li>
+            <li class="nav-item">                  
+              <a class="nav-link" href="#">
+                <div class="d-flex sidebarContainer" >
+                  <div class="sideBarIconContainer" style="background: linear-gradient(135deg,#450af5,#c4efd9);"><i class="bi bi-heart-fill"></i></div>
+                  <h5 class="d-inline">Liked Songs</h5>
+                </div>
+              </a>
+            </li>
+            <li class="nav-item playlistItem">
+                <hr class="sidebarHr">
+            </li>
+            <li class="nav-item playlistItem">
+              <a class="nav-link" href="#">Funky Heavy Blues</a>
+            </li>
+            <li class="nav-item playlistItem">
+              <a class="nav-link" href="#">Your Top Songs 2020</a>
+            </li>
+            <li class="nav-item playlistItem">
+              <a class="nav-link" href="#">In Love With You - Erykah B.</a>
+            </li>
+            <li class="nav-item playlistItem">
+              <a class="nav-link" href="#">This Is Rod Stewart</a>
+            </li>
+            <li class="nav-item playlistItem">
+              <a class="nav-link" href="#">FRANCHISE ft. Young Thug</a>
+            </li>
+            <li class="nav-item playlistItem">
+              <a class="nav-link" href="#">Your Top Songs 2019</a>
+            </li>
+            <li class="nav-item playlistItem">
+              <a class="nav-link" href="#">Metallica</a>
+            </li>
+            <li class="nav-item playlistItem">
+              <a class="nav-link" href="#">Pantera Rules</a>
+            </li>
+            <li class="nav-item playlistItem">
+              <a class="nav-link" href="#">This Is Megadeath</a>
+            </li>
+            <li class="nav-item playlistItem">
+              <a class="nav-link" href="#">Steel Panther</a>
+            </li>
+            <li class="nav-item playlistItem">
+              <a class="nav-link" href="#">Jazz Classics </a>
+            </li>
+          </ul>
+      </div>
+        <div id="navbar-pagecontent">    
+          <div id=navbar-pagecontent-gradient>
+
+          
+            <nav class="navbar navbar-expand-lg w-100 sticky-top" id="navbarBody">
+                <div id="navbarFlexContainer" class="d-flex justify-content-between align-content-center w-100">
+                    <div id="navbarButtonContainer" class="d-flex justify-content-between pt-2">
+                        <button class="btn navbarButtons d-flex justify-content-center align-items-center"><i class="bi bi-chevron-left"></i></button>
+                        <button class="btn navbarButtons d-flex justify-content-center align-items-center disabled"><i class="bi bi-chevron-right"></i></button>
+                    </div>
+                    <button class="btn nav-item  dropdown">                    
+                        <a class="pl-1 nav-link dropdown-toggle d-flex align-items-center navbarDropdown" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="bi bi-person-circle"></i>
+                            <div class="pl-1 navUserName">Strive Buildweek Spotify</div>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/homepage.html">Home</a>
+                            <a class="dropdown-item" href="/artist.html">Artist</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="/loginpage.html">Logout</a>
+                        </div>
+                    </button>
+                </div>
+            </nav>
+            <div class="container-fluid page-content" id="pageBody">
+              <div id="album-jumbotron" class="d-flex mt-4 ml-3">
+                <div>
+                  <img id="album-page-cover-image"  src="/assets/BohemianRapsody.jpg" alt="">
+                </div>
+                <div class="ml-4 d-flex-column mt-auto">
+                  <div>
+                    <h5>ALBUM</h5>
+                  </div>
+                  <div>
+                    <h1>Bohemian Rhapsody (The Original Soundtrack)</h1>
+                  </div>
+                  <div class="album-details d-flex">
+                    <div class="d-flex align-items-center">
+                      <img id="queenIcon" src="/assets/QueenIcon.jpg" alt="QueenIcon">
+                    </div>
+                    <div class="d-flex align-items-center ml-1 pt-1">
+                      <h5>Queen <span class="span">• 2018 • 22 songs, 1hr 19min</span></h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="album-playsection" class="d-flex mt-5 ml-3">
+                <div id="playbutton" class="d-flex align-items-center">
+                  <i class="bi bi-play-circle-fill album-playbutton"></i>
+                </div>
+                <div class="d-flex align-items-center ml-5">
+                  <button id="playsectionHeartButton" type="button" onclick="playsectionHeartColor()">
+                    <i id="playsectionHeart" class="bi bi-heart album-heart text-white-50"></i>
+                  </button>
+                </div>
+                <div class="d-flex align-items-center ml-4">
+                  <i class="bi bi-three-dots album-dots text-white-50"></i>
+                </div>
+              </div>
+              <div id="album-table" class="mt-4 ml-4">
+                <div class="d-flex text-white-50">
+                  <div class="ml-3 mr-3">
+                    <h6>#</h6>
+                  </div>
+                  <div>
+                    <h6>TITLE</h6>
+                  </div>
+                  <div class="ml-auto mr-5">
+                    <i class="bi bi-clock"></i>
+                  </div>
+                </div>
+
+                <hr class="mt-0">
+
+                <div class=" title-row d-flex" onclick="changePlayer(event)" onmouseenter="mouseOver(event)" onmouseleave="mouseLeft(event)" onmouseenter="mouseOver(event)" onmouseleave="mouseLeft(event)">
+                  <div class="d-flex ml-3 mr-3 text-white-50 align-items-center">
+                    <h6>1</h6>
+                  </div>
+                  <div class="d-flex-column">
+                    <div>
+                      <p class="title-font">20th Century Fox Fanfare</p>
+                    </div>
+                    <div>
+                      <p class="artist-font">Queen</p>
+                    </div>
+                  </div>
+                  <div class="d-flex ml-3 mr-3 text-white-50 align-items-center ml-auto mr-5 ">
+                    <h6>0:25</h6>
+                  </div>
+                </div>
+                <div class=" title-row d-flex" onclick="changePlayer(event)" onmouseenter="mouseOver(event)" onmouseleave="mouseLeft(event)">
+                  <div class="d-flex ml-3 mr-3 text-white-50 align-items-center">
+                    <h6>2</h6>
+                  </div>
+                  <div class="d-flex-column">
+                    <div>
+                      <p class="title-font">Somebody To Love</p>
+                    </div>
+                    <div>
+                      <p class="artist-font">Queen</p>
+                    </div>
+                  </div>
+                  <div class="d-flex ml-3 mr-3 text-white-50 align-items-center ml-auto mr-5 ">
+                    <h6>4:55</h6>
+                  </div>
+                </div>
+                <div class=" title-row d-flex" onclick="changePlayer(event)" onmouseenter="mouseOver(event)" onmouseleave="mouseLeft(event)">
+                  <div class="d-flex ml-3 mr-3 text-white-50 align-items-center">
+                    <h6>3</h6>
+                  </div>
+                  <div class="d-flex-column">
+                    <div>
+                      <p class="title-font">Doing All Right - ...Revisited</p>
+                    </div>
+                    <div>
+                      <p class="artist-font">Queen</p>
+                    </div>
+                  </div>
+                  <div class="d-flex ml-3 mr-3 text-white-50 align-items-center ml-auto mr-5 ">
+                    <h6>3:16</h6>
+                  </div>
+                </div>
+                <div class=" title-row d-flex" onclick="changePlayer(event)" onmouseenter="mouseOver(event)" onmouseleave="mouseLeft(event)">
+                  <div class="d-flex ml-3 mr-3 text-white-50 align-items-center">
+                    <h6>4</h6>
+                  </div>
+                  <div class="d-flex-column">
+                    <div>
+                      <p class="title-font">Keep Yourself Alive - Live At The Rainbow</p>
+                    </div>
+                    <div>
+                      <p class="artist-font">Queen</p>
+                    </div>
+                  </div>
+                  <div class="d-flex ml-3 mr-3 text-white-50 align-items-center ml-auto mr-5 ">
+                    <h6>3:56</h6>
+                  </div>
+                </div>
+                <div class=" title-row d-flex" onclick="changePlayer(event)" onmouseenter="mouseOver(event)" onmouseleave="mouseLeft(event)">
+                  <div class="d-flex ml-3 mr-3 text-white-50 align-items-center">
+                    <h6>5</h6>
+                  </div>
+                  <div class="d-flex-column">
+                    <div>
+                      <p class="title-font">Killer Queen</p>
+                    </div>
+                    <div>
+                      <p class="artist-font">Queen</p>
+                    </div>
+                  </div>
+                  <div class="d-flex ml-3 mr-3 text-white-50 align-items-center ml-auto mr-5 ">
+                    <h6>2:59</h6>
+                  </div>
+                </div>
+                <div class=" title-row d-flex" onclick="changePlayer(event)" onmouseenter="mouseOver(event)" onmouseleave="mouseLeft(event)">
+                  <div class="d-flex ml-3 mr-3 text-white-50 align-items-center">
+                    <h6>6</h6>
+                  </div>
+                  <div class="d-flex-column">
+                    <div>
+                      <p class="title-font">Fat Bottomed Girls - Live in Paris</p>
+                    </div>
+                    <div>
+                      <p class="artist-font">Queen</p>
+                    </div>
+                  </div>
+                  <div class="d-flex ml-3 mr-3 text-white-50 align-items-center ml-auto mr-5 ">
+                    <h6>4:37</h6>
+                  </div>
+                </div>
+                <div class=" title-row d-flex" onclick="changePlayer(event)" onmouseenter="mouseOver(event)" onmouseleave="mouseLeft(event)">
+                  <div class="d-flex ml-3 mr-3 text-white-50 align-items-center">
+                    <h6>7</h6>
+                  </div>
+                  <div class="d-flex-column">
+                    <div>
+                      <p class="title-font">Bohemian Rhapsody</p>
+                    </div>
+                    <div>
+                      <p class="artist-font">Queen</p>
+                    </div>
+                  </div>
+                  <div class="d-flex ml-3 mr-3 text-white-50 align-items-center ml-auto mr-5 ">
+                    <h6>5:54</h6>
+                  </div>
+                </div>
+                <div class=" title-row d-flex" onclick="changePlayer(event)" onmouseenter="mouseOver(event)" onmouseleave="mouseLeft(event)">
+                  <div class="d-flex ml-3 mr-3 text-white-50 align-items-center">
+                    <h6>8</h6>
+                  </div>
+                  <div class="d-flex-column">
+                    <div>
+                      <p class="title-font">Now I`m Here - Live At The Hammersmith Odeon</p>
+                    </div>
+                    <div>
+                      <p class="artist-font">Queen</p>
+                    </div>
+                  </div>
+                  <div class="d-flex ml-3 mr-3 text-white-50 align-items-center ml-auto mr-5 ">
+                    <h6>4:25</h6>
+                  </div>
+                </div>
+                <div class=" title-row d-flex" onclick="changePlayer(event)" onmouseenter="mouseOver(event)" onmouseleave="mouseLeft(event)">
+                  <div class="d-flex ml-3 mr-3 text-white-50 align-items-center">
+                    <h6>9</h6>
+                  </div>
+                  <div class="d-flex-column">
+                    <div>
+                      <p class="title-font">Crazy Little Thing Called Love</p>
+                    </div>
+                    <div>
+                      <p class="artist-font">Queen</p>
+                    </div>
+                  </div>
+                  <div class="d-flex ml-3 mr-3 text-white-50 align-items-center ml-auto mr-5 ">
+                    <h6>2:43</h6>
+                  </div>
+                </div>
+                <div class=" title-row d-flex" onclick="changePlayer(event)" onmouseenter="mouseOver(event)" onmouseleave="mouseLeft(event)">
+                  <div class="d-flex ml-2 mr-3 text-white-50 align-items-center">
+                    <h6>10</h6>
+                  </div>
+                  <div class="d-flex-column">
+                    <div>
+                      <p class="title-font">Love Of My Life - Live At Rock In Rio</p>
+                    </div>
+                    <div>
+                      <p class="artist-font">Queen</p>
+                    </div>
+                  </div>
+                  <div class="d-flex ml-3 mr-3 text-white-50 align-items-center ml-auto mr-5 ">
+                    <h6>4:28</h6>
+                  </div>
+                </div>
+                <div class=" title-row d-flex" onclick="changePlayer(event)" onmouseenter="mouseOver(event)" onmouseleave="mouseLeft(event)">
+                  <div class="d-flex ml-2 mr-3 text-white-50 align-items-center">
+                    <h6>11</h6>
+                  </div>
+                  <div class="d-flex-column">
+                    <div>
+                      <p class="title-font">We Will Rock You - Movie Mix</p>
+                    </div>
+                    <div>
+                      <p class="artist-font">Queen</p>
+                    </div>
+                  </div>
+                  <div class="d-flex ml-3 mr-3 text-white-50 align-items-center ml-auto mr-5 ">
+                    <h6>2:09</h6>
+                  </div>
+                </div>
+                <div class=" title-row d-flex" onclick="changePlayer(event)" onmouseenter="mouseOver(event)" onmouseleave="mouseLeft(event)">
+                  <div class="d-flex ml-2 mr-3 text-white-50 align-items-center">
+                    <h6>12</h6>
+                  </div>
+                  <div class="d-flex-column">
+                    <div>
+                      <p class="title-font">Another One Bites The Dust</p>
+                    </div>
+                    <div>
+                      <p class="artist-font">Queen</p>
+                    </div>
+                  </div>
+                  <div class="d-flex ml-3 mr-3 text-white-50 align-items-center ml-auto mr-5 ">
+                    <h6>3:34</h6>
+                  </div>
+                </div>
+                <div class=" title-row d-flex" onclick="changePlayer(event)" onmouseenter="mouseOver(event)" onmouseleave="mouseLeft(event)">
+                  <div class="d-flex ml-2 mr-3 text-white-50 align-items-center">
+                    <h6>13</h6>
+                  </div>
+                  <div class="d-flex-column">
+                    <div>
+                      <p class="title-font">I Want To Break Free</p>
+                    </div>
+                    <div>
+                      <p class="artist-font">Queen</p>
+                    </div>
+                  </div>
+                  <div class="d-flex ml-3 mr-3 text-white-50 align-items-center ml-auto mr-5 ">
+                    <h6>2:43</h6>
+                  </div>
+                </div>
+                <div class=" title-row d-flex" onclick="changePlayer(event)" onmouseenter="mouseOver(event)" onmouseleave="mouseLeft(event)">
+                  <div class="d-flex ml-2 mr-3 text-white-50 align-items-center">
+                    <h6>14</h6>
+                  </div>
+                  <div class="d-flex-column">
+                    <div>
+                      <p class="title-font">Under Pressure</p>
+                    </div>
+                    <div>
+                      <p class="artist-font">Queen, David Bowie</p>
+                    </div>
+                  </div>
+                  <div class="d-flex ml-3 mr-3 text-white-50 align-items-center ml-auto mr-5 ">
+                    <h6>4:04</h6>
+                  </div>
+                </div>
+                <div class=" title-row d-flex" onclick="changePlayer(event)" onmouseenter="mouseOver(event)" onmouseleave="mouseLeft(event)">
+                  <div class="d-flex ml-2 mr-3 text-white-50 align-items-center">
+                    <h6>15</h6>
+                  </div>
+                  <div class="d-flex-column">
+                    <div>
+                      <p class="title-font">Who Wants To Live Forever</p>
+                    </div>
+                    <div>
+                      <p class="artist-font">Queen</p>
+                    </div>
+                  </div>
+                  <div class="d-flex ml-3 mr-3 text-white-50 align-items-center ml-auto mr-5 ">
+                    <h6>5:14</h6>
+                  </div>
+                </div>
+                <div class=" title-row d-flex" onclick="changePlayer(event)" onmouseenter="mouseOver(event)" onmouseleave="mouseLeft(event)">
+                  <div class="d-flex ml-2 mr-3 text-white-50 align-items-center">
+                    <h6>16</h6>
+                  </div>
+                  <div class="d-flex-column">
+                    <div>
+                      <p class="title-font">Bohemian Rhapsody - Live Aid</p>
+                    </div>
+                    <div>
+                      <p class="artist-font">Queen</p>
+                    </div>
+                  </div>
+                  <div class="d-flex ml-3 mr-3 text-white-50 align-items-center ml-auto mr-5 ">
+                    <h6>2:27</h6>
+                  </div>
+                </div>
+                <div class=" title-row d-flex" onclick="changePlayer(event)" onmouseenter="mouseOver(event)" onmouseleave="mouseLeft(event)">
+                  <div class="d-flex ml-2 mr-3 text-white-50 align-items-center">
+                    <h6>17</h6>
+                  </div>
+                  <div class="d-flex-column">
+                    <div>
+                      <p class="title-font">Radio Ga Ga - Live Aid</p>
+                    </div>
+                    <div>
+                      <p class="artist-font">Queen</p>
+                    </div>
+                  </div>
+                  <div class="d-flex ml-3 mr-3 text-white-50 align-items-center ml-auto mr-5 ">
+                    <h6>4:05</h6>
+                  </div>
+                </div>
+                <div class=" title-row d-flex" onclick="changePlayer(event)" onmouseenter="mouseOver(event)" onmouseleave="mouseLeft(event)">
+                  <div class="d-flex ml-2 mr-3 text-white-50 align-items-center">
+                    <h6>18</h6>
+                  </div>
+                  <div class="d-flex-column">
+                    <div>
+                      <p class="title-font">Ay-Oh - Live Aid</p>
+                    </div>
+                    <div>
+                      <p class="artist-font">Queen</p>
+                    </div>
+                  </div>
+                  <div class="d-flex ml-3 mr-3 text-white-50 align-items-center ml-auto mr-5 ">
+                    <h6>0:41</h6>
+                  </div>
+                </div>
+                <div class=" title-row d-flex" onclick="changePlayer(event)" onmouseenter="mouseOver(event)" onmouseleave="mouseLeft(event)">
+                  <div class="d-flex ml-2 mr-3 text-white-50 align-items-center">
+                    <h6>19</h6>
+                  </div>
+                  <div class="d-flex-column">
+                    <div>
+                      <p class="title-font">Hammer To Fall - Live Aid</p>
+                    </div>
+                    <div>
+                      <p class="artist-font">Queen</p>
+                    </div>
+                  </div>
+                  <div class="d-flex ml-3 mr-3 text-white-50 align-items-center ml-auto mr-5 ">
+                    <h6>4:03</h6>
+                  </div>
+                </div>
+                <div class=" title-row d-flex" onclick="changePlayer(event)" onmouseenter="mouseOver(event)" onmouseleave="mouseLeft(event)">
+                  <div class="d-flex ml-2 mr-3 text-white-50 align-items-center">
+                    <h6>20</h6>
+                  </div>
+                  <div class="d-flex-column">
+                    <div>
+                      <p class="title-font">We Are The Champions- Live Aid</p>
+                    </div>
+                    <div>
+                      <p class="artist-font">Queen</p>
+                    </div>
+                  </div>
+                  <div class="d-flex ml-3 mr-3 text-white-50 align-items-center ml-auto mr-5 last">
+                    <h6>3:47</h6>
+                  </div>
+                </div>
+                <div class=" title-row d-flex" onclick="changePlayer(event)" onmouseenter="mouseOver(event)" onmouseleave="mouseLeft(event)">
+                  <div class="d-flex ml-2 mr-3 text-white-50 align-items-center">
+                    <h6>21</h6>
+                  </div>
+                  <div class="d-flex-column">
+                    <div>
+                      <p class="title-font">Don`t Stop Me Now - ...Revisited</p>
+                    </div>
+                    <div>
+                      <p class="artist-font">Queen</p>
+                    </div>
+                  </div>
+                  <div class="d-flex ml-3 mr-3 text-white-50 align-items-center ml-auto mr-5 ">
+                    <h6>0:41</h6>
+                  </div>
+                </div>
+                <div class=" title-row d-flex" onclick="changePlayer(event)" onmouseenter="mouseOver(event)" onmouseleave="mouseLeft()">
+                  <div class="d-flex ml-2 mr-3 text-white-50 align-items-center">
+                    <h6>22</h6>
+                  </div>
+                  <div class="d-flex-column">
+                    <div>
+                      <p class="title-font">Don`t Stop Me Now - ...Revisited</p>
+                    </div>
+                    <div>
+                      <p class="artist-font">Queen</p>
+                    </div>
+                  </div>
+                  <div class="d-flex ml-3 mr-3 text-white-50 align-items-center ml-auto mr-5 ">
+                    <h6>4:31</h6>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div id="player" class="container-fluid fixed-bottom text-white">
+      <div class="row">
+        <div class="col-4 d-flex">
+          <div class="d-flex">
+            <div class="player-album-image-container">
+            <img id="player-album-image" src="/assets/queenImage.jpg" alt="queen">
+          </div>
+          <div class="ml-2">
+            <p class="player-album">
+              Another One Bites The Dust - Remastered 2011
+            </p>
+            <p class= player-artist>
+              Queen
+            </p>
+          </div>
+          <div class="icons-player-album">
+            <i class="bi bi-heart icon-size-player"></i>
+            <i class="bi bi-laptop icon-size-player ml-3"></i>
+          </div>
+          </div>
+        </div>
+        <div class="col-4 d-flex player-column">
+          <div class="timeline-time">
+            <p>0:12</p>
+          </div>
+          <div class="player-width">
+          <div class="icons-player-middle">
+            <i class="bi bi-shuffle icon-size-player ml-2 pt-2"></i>
+            <i class="bi bi-skip-start-fill icon-size-player ml-3 pt-2"></i>
+            <i class="bi bi-play-circle-fill ml-3 mb-2" style="font-size: 1.2rem"></i>
+            <i class="bi bi-skip-end-fill icon-size-player ml-3 pt-2"></i>
+            <i class="bi bi-arrow-repeat icon-size-player ml-3 pt-2"></i> 
+          </div>
+          <div id="musicBarContainer">
+            <div id="timeline">
+                <div id="progress" style="margin-left: 0px;">
+            </div>
+          </div>        
+          </div>
+         </div>
+        <div class="timeline-time">
+          <p>3:34</p>
+        </div>
+      </div>
+        <div class="col-4 d-flex justify-content-end">
+          <div class="icons-player-right">
+            <i class="bi bi-music-note-list icon-size-player"></i>
+            <i class="bi bi-laptop icon-size-player ml-3"></i>
+            <i class="bi bi-volume-up icon-size-player ml-3"></i>
+            <div id="volume"></div>
+          </div>
+        </div>
+    </div>
+    </div>
+<script>
+
+function changePlayer(event) {
+
+   let playerImage = document.querySelector("#player img")
+   playerImage.remove()
+   let newImage = document.createElement("img")
+   newImage.src = "/assets/BohemianRapsody.jpg"
+   newImage.classList.add("newPlayerImageSize")
+  let addImage = document.querySelector("#player > div > div >div > div")
+  addImage.appendChild(newImage)
+
+  let titleText = event.target.querySelector(".title-row .d-flex-column p")
+  console.log(titleText.innerHTML)
+  let changeToNewText = document.querySelector("#player .player-album")
+  changeToNewText.innerHTML = titleText.innerHTML
+
+ }
+
+function playsectionHeartColor() {
+
+  let playsection = document.querySelector("#playsectionHeart") 
+  if(playsection.className == "bi bi-heart album-heart text-white-50"){
+    playsection.classList.remove("text-white-50")
+    playsection.classList.add("text-success") 
+  } else { 
+    playsection.classList.remove("text-success")
+    playsection.classList.add("text-white-50")
+  }
+//  console.log("klick")
+}
+
+function mouseOver(event){
+ 
+    let changeElement = event.target.querySelector(".title-row h6").style.visibility = "hidden"
+
+    let newPath = event.target.querySelector(".title-row > div")
+
+    let checkPath = event.target.querySelector(".title-row >div h6") 
+
+    if (checkPath.innerHTML > 9) {
+    newPath.classList.remove("mr-3")
+    newPath.classList.add("mr-2")
+  }
+  
+    newPath.classList.remove("ml-2")
+    newPath.classList.remove("ml-3")
+    
+
+    let playButton = document.createElement("i")
+    playButton.className = "bi-play-fill text-white"
+    newPath.appendChild(playButton)
+
+    let heartPath = event.target.querySelector(".title-row div:nth-child(3)") 
+    let heart = document.createElement("i")
+    heart.className = "bi-heart text-muted mr-4"   
+    heartPath.insertBefore(heart, heartPath.childNodes[0])
+
+    let dottedLinePath = event.target.querySelector(".title-row div:nth-child(3)")
+    let dottedLine = document.createElement("i")
+    dottedLine.className ="bi-three-dots text-white ml-3"
+    dottedLinePath.appendChild(dottedLine)
+    dottedLinePath.classList.remove("mr-5")
+    
+
+}
+function mouseLeft(event){
+
+  let changeElement = event.target.querySelector(".title-row h6").style.visibility = "visible"
+  let newPath = event.target.querySelector(".title-row > div > i")
+  newPath.remove()
+  let heartPath = event.target.querySelector (".title-row div:nth-child(3) > i") 
+  heartPath.remove()
+  let addClassAgain = event.target.querySelector(".title-row > div")
+  addClassAgain.classList.add("ml-3")
+  addClassAgain.classList.add("ml-2")
+
+  let checkPath = event.target.querySelector(".title-row >div h6") 
+
+
+
+  let dottedLinePath = event.target.querySelector(".title-row div:nth-child(3) > i")
+  dottedLinePath.remove()
+  let dottedLineClass = event.target.querySelector(".title-row div:nth-child(3)")
+  dottedLineClass.classList.add("mr-5")
+}
+
+const changeSidebarSelected = function(event){
+    let currentlySelectedItem = document.querySelector('.selctedSidebarItem')
+    currentlySelectedItem.classList.remove('selctedSidebarItem')
+    event.target.classList.add('selctedSidebarItem')
+  }
+
+</script>
+    
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+</body>
+</html>

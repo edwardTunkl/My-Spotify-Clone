@@ -1,0 +1,309 @@
+body {
+    
+}
+
+#mainBody {
+  display: flex;
+  align-items: stretch;
+}
+
+#navbar-pagecontent {
+  background: rgb(163, 22, 116);
+  background: linear-gradient(
+    180deg,
+    rgb(165, 23, 139) 0%,
+    rgb(95, 35, 95) 30%,
+    #191919 70%
+  );
+  width: 100%;
+  margin-left: 250px;
+}
+#navbar-pagecontent-gradient {
+  background: linear-gradient(180deg, transparent 0%, rgb(34, 34, 34) 80%);
+  width: 100%;
+}
+
+.navbarButtons {
+  color: white;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 32px;
+  width: 32px;
+  margin-left: 1rem;
+}
+
+.navbarDropdown {
+  color: white;
+  border-radius: 23px;
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 32px;
+}
+
+.selctedSidebarItem {
+  color: white !important;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+#sidebar li a div {
+  pointer-events: none;
+}
+
+#sidebar {
+  background-color: rgb(0, 0, 0);
+  min-width: 250px;
+  min-height: 100vh;
+  z-index: 99;
+}
+
+#spotifyLogo {
+  width: 125px;
+  margin: 15px 0 15px 20px;
+}
+
+#sidebar > ul > li > a {
+  color: #b3b3b3;
+}
+
+hr.sidebarHr {
+  color: #b3b3b3;
+  background-color: #282828;
+  border: none;
+  height: 1px;
+  min-height: 1px;
+}
+
+#sidebar .nav-link {
+  padding: 0 24px;
+  margin: 0;
+}
+
+#sidebar .nav-item {
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar > h5 {
+  padding: 0;
+  margin: 0;
+}
+
+#sidebar > ul > li > a:hover {
+  color: white !important;
+}
+
+.sidebarContainer {
+  height: 24px;
+  width: 150px;
+}
+
+#sidebar > ul > li.nav-item > a {
+  padding-bottom: 8px;
+  padding-top: 8px;
+}
+
+#sidebar > ul > li:nth-child(3) {
+  padding-bottom: 42px;
+}
+
+.sideBarIconContainer {
+  display: flex;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  margin-right: 1rem;
+}
+
+li a div h5 {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.navbar {
+  width: 100%;
+}
+
+.navUserName {
+  width: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#player {
+  height: 60px;
+  background-color: #181818;
+  z-index: 100;
+}
+#player-album-image {
+  height: 40px;
+}
+.player-album-image-container {
+  display: flex;
+  height: 60px;
+  align-items: center;
+}
+.player-album {
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+.player-artist {
+  font-size: 10px;
+  color: #b3b3b3;
+}
+.icon-size-player {
+  font-size: 0.7rem;
+  color: #b3b3b3;
+}
+.icons-player-album {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+  color: #b3b3b3;
+}
+.icons-player-middle {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+}
+.timeline-player {
+  display: flex;
+  justify-content: center;
+}
+
+.icons-player-right {
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.player-column {
+}
+
+#musicBarContainer {
+  margin-top: 0;
+  display: flex;
+}
+.timeline-time {
+  color: #b3b3b3;
+  font-size: 8px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 36px;
+}
+div#timeline {
+  width: 400px;
+  height: 3px;
+  background: gray;
+  display: block;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+div#progress {
+  width: 40px;
+  height: 2px;
+  background: white;
+}
+div#volume {
+  min-width: 60px;
+  height: 3px;
+  margin-left: 5px;
+  background: white;
+  display: block;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+/* Album-Page Styling */
+
+#album-page-cover-image {
+  height: 234px;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#queenIcon {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+#album-jumbotron h5 {
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  font-weight: 700;
+}
+#album-jumbotron h1 {
+  color: white;
+  font-weight: 700;
+}
+#album-jumbotron .album-details {
+  height: 30px;
+}
+#album-jumbotron .album-details .span {
+  color: #b3b3b3;
+  font-weight: 600;
+}
+#album-playsection .album-playbutton {
+  font-size: 60px;
+  color: #1db954;
+}
+
+#playbutton {
+  height: 30px;
+  width: 60px;
+  background-position: center;
+  background-color: white;
+  border-radius: 50%;
+}
+#album-playsection .album-heart {
+  font-size: 30px;
+}
+#playsectionHeartButton{
+    background-color: transparent;
+    border: none;
+}
+#album-playsection .album-dots {
+  font-size: 30px;
+}
+#album-table hr {
+  color: #b3b3b3;
+  background-color: #686767;
+  border: none;
+  height: 1px;
+  min-height: 1px;
+}
+#album-table .artist-font {
+  height: 25px;
+}
+
+#album-table .title-font {
+  color: white;
+  margin-bottom: 0;
+}
+
+#album-table .artist-font {
+  color: #b3b3b3;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+.title-row:hover {
+  background-color: rgb(49, 49, 49);
+  border-radius: 10px;
+}
+.newPlayerImageSize {
+    height: 40px;
+}
+.title-row p, .title-row h6 {
+    pointer-events: none;
+}

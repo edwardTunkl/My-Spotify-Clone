@@ -1,0 +1,599 @@
+<!doctype html>
+<html lang="en">
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="home.css">
+        <title>Spotify Clone</title>
+</head>
+<body>
+    <div id="mainBody" class="d-flex w-100 h-100">
+      <div id="sidebar" class="position-fixed px-1"> 
+        <img src="/assets/spotify-icons-logos/spotify-icons-logos/logos/01_RGB/02_PNG/Spotify_Logo_RGB_White.png" class="img-fluid" alt="" id="spotifyLogo">
+        <ul class="nav flex-column">
+            <li class="nav-item pt-1">
+                <a class="nav-link  selctedSidebarItem" onclick="changeSidebarSelected(event)" href="/homepage.html">
+                  <div class="d-flex sidebarContainer">
+                    <div class="sideBarIconContainer"><i class="bi bi-house-door"></i></div>
+                    <h5>Home</h5>
+                  </div>
+                </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" onclick="changeSidebarSelected(event)" href="#">
+                <div class="d-flex sidebarContainer">
+                  <div class="sideBarIconContainer"><i class="bi bi-search"></i></div>
+                  <h5>Search</h5>
+                </div>
+              </a>
+            </li>
+            <li class="nav-item">                  
+              <a class="nav-link" onclick="changeSidebarSelected(event)" href="#">
+                <div class="d-flex sidebarContainer">
+                  <div class="sideBarIconContainer"><i class="bi bi-book"></i></div>
+                  <h5 class="d-inline">Your Library</h5>
+                </div>
+              </a>
+            </li>
+            <li class="nav-item">                  
+              <a class="nav-link" href="#">
+                <div class="d-flex sidebarContainer">
+                  <div class="sideBarIconContainer" style="background:#b3b3b3; width:24px; height:24px;"><h5 class="d-inline"><i class="bi bi-plus" style="color:black;"></i></div>
+                  <h5 class="d-inline">Create Playlist</h5>
+                </div>
+              </a>
+            </li>
+            <li class="nav-item">                  
+              <a class="nav-link" href="#">
+                <div class="d-flex sidebarContainer" >
+                  <div class="sideBarIconContainer" style="background: linear-gradient(135deg,#450af5,#c4efd9);"><i class="bi bi-heart-fill"></i></div>
+                  <h5 class="d-inline">Liked Songs</h5>
+                </div>
+              </a>
+            </li>
+            <li class="nav-item playlistItem">
+                <hr class="sidebarHr">
+            </li>
+            <li class="nav-item playlistItem">
+              <a class="nav-link" href="#">Funky Heavy Blues</a>
+            </li>
+            <li class="nav-item playlistItem">
+              <a class="nav-link" href="#">Your Top Songs 2020</a>
+            </li>
+            <li class="nav-item playlistItem">
+              <a class="nav-link" href="#">In Love With You - Erykah B.</a>
+            </li>
+            <li class="nav-item playlistItem">
+              <a class="nav-link" href="#">This Is Rod Stewart</a>
+            </li>
+            <li class="nav-item playlistItem">
+              <a class="nav-link" href="#">FRANCHISE ft. Young Thug</a>
+            </li>
+            <li class="nav-item playlistItem">
+              <a class="nav-link" href="#">Your Top Songs 2019</a>
+            </li>
+            <li class="nav-item playlistItem">
+              <a class="nav-link" href="#">Metallica</a>
+            </li>
+            <li class="nav-item playlistItem">
+              <a class="nav-link" href="#">Pantera Rules</a>
+            </li>
+            <li class="nav-item playlistItem">
+              <a class="nav-link" href="#">This Is Megadeath</a>
+            </li>
+            <li class="nav-item playlistItem">
+              <a class="nav-link" href="#">Steel Panther</a>
+            </li>
+            <li class="nav-item playlistItem">
+              <a class="nav-link" href="#">Jazz Classics </a>
+            </li>
+          </ul>
+      </div>
+      <div id="navbar-pagecontent" class="pt-5px">    
+        <div id="nullDiv">
+            <nav class="navbar navbar-expand-lg w-100 sticky-top" id="navbarBody">
+                <div id="navbarFlexContainer" class="d-flex justify-content-between align-content-center w-100 ">
+                    <div id="navbarButtonContainer" class="d-flex justify-content-between pt-1 ml-1">
+                        <button class="btn navbarButtons d-flex justify-content-center align-items-center"><i class="bi bi-chevron-left"></i></button>
+                        <button class="btn navbarButtons d-flex justify-content-center align-items-center disabled"><i class="bi bi-chevron-right"></i></button>
+                    </div>
+                    <button class="btn nav-item dropdown">                    
+                        <a class="pl-1 nav-link dropdown-toggle d-flex align-items-center navbarDropdown" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="bi bi-person-circle"></i>
+                            <div class="pl-1 navUserName">Strive Buildweek Spotify</div>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/artist.html">Artist</a>
+                            <a class="dropdown-item" href="/album.html">Album</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="/loginpage.html">Logout</a>
+                        </div>
+                    </button>
+                </div>
+            </nav>
+            <div class="container-xl page-content" id="pageBodyHome">
+              <h3 id=greet class="text-left text-white ml-1 py-3"></h3>
+              <div class="container ml-1" style="padding: 0px;" id="horizontal cards">
+                <div class="row row-cols-xs-1 row-cols-sm-2  row-cols-lg-4">
+                  <div class="col ">
+                    <div class="mb-3">
+                    <div class="row no-gutters cardHorizontal">
+                      <div class="col-md-4 ">
+                        <img src="assets/queenImage.jpg" style="max-width: 100%;" alt="...">
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body ">
+                          <h6 style="margin-bottom: 0;" class="cardText card-title ">Queen</h6>
+                            
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+
+                  <div class="col  ">
+                    <div class="mb-3">
+                    <div class="row no-gutters cardHorizontal">
+                      <div class="col-md-4">
+                        <img src="assets/postHuman.jpg" style="max-width: 100%;" alt="...">
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body ">
+                          <h6 style="margin-bottom: 0;" class="cardText card-title ">PostHuman</h6>
+                            </div>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+
+                  <div class="col  ">
+                    <div class="mb-3">
+                    <div class="row no-gutters cardHorizontal">
+                      <div class="col-md-4">
+                        <img src="assets/nymphetamin.jpg" style="max-width: 100%;" alt="...">
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body">
+                          <h6 style="margin-bottom: 0;" class="cardText card-title ">Nymphetamin</h6>
+                          
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+
+                  <div class="col  ">
+                    <div class="mb-3">
+                    <div class="row no-gutters cardHorizontal">
+                      <div class="col-md-4">
+                        <img src="assets/likedSongs.png" style="max-width: 100%;" alt="...">
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body ">
+                          <h6 style="margin-bottom: 0;" class="cardText card-title ">Liked Songs</h6>
+                            
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+
+                  <div class="col  ">
+                    <div class="mb-3">
+                    <div class="row no-gutters cardHorizontal">
+                      <div class="col-md-4">
+                        <img src="assets/Burning Jazz-rock.....jpg" style="max-width: 100%;" alt="...">
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body ">
+                          <h6 style="margin-bottom: 0;" class="cardText card-title ">Burning Jazz:rock</h6>
+                          
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+
+                  <div class="col  ">
+                    <div class="mb-3">
+                    <div class="row no-gutters cardHorizontal">
+                      <div class="col-md-4">
+                        <img src="assets/bohemianRapsody.jpg" style="max-width: 100%;" alt="...">
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body ">
+                          <h6 style="margin-bottom: 0;" class="cardText card-title ">BohemianRapsody</h6>
+                            
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+
+                  <div class="col  ">
+                    <div class="mb-3">
+                    <div class="row no-gutters cardHorizontal">
+                      <div class="col-md-4">
+                        <img src="assets/metalBallads.jpg" style="max-width: 100%;" alt="...">
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body ">
+                          <h6 style="margin-bottom: 0;" class="cardText card-title ">MetaBallads</h6>
+                           
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+
+                  <div class="col  ">
+                    <div class="mb-3">
+                    <div class="row no-gutters cardHorizontal">
+                      <div class="col-md-4">
+                        <img src="assets/leBask.jpg" style="max-width: 100%;" alt="...">
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body ">
+                          <h6 style="margin-bottom: 0;" class="cardText card-title ">LeBask</h6>
+                            
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between pb-1 pt-5">
+              <h5 class="text-left text-white ml-1 ">Recently Played</h5>
+              <a class="text-white" data-toggle="collapse" href="#RecentCollapse" role="button" aria-expanded="false" aria-controls="collapseExample">
+                See all
+              </a>
+            </div>
+              <div class="container-xl  d-flex flex-row ml-1" style="padding: 0px;" id="verticalCards">
+                <div class="row row-cols-sm-2 row--cols-xs-1 row-cols-md-3 row-cols-lg-6">
+                  
+                  <div class="col">
+                    <div class="card w-100 h-100 cardVertical ">
+                            <img src="assets/likedSongs.png" class="card-img-top" style=" box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"  alt="...">
+                        <div class="Verticalcard-body">
+                            <h6 class="text-left card-title pt-3">Liked Songs</h6>
+                            <p style="font-size: small; text-align: left;" class="text-muted cardText card-text">Enjoy your favourite songs.</p>
+                                 <div  class="verticalCardHoverBody">
+                                <div class="contentHover">
+                                  <p>This is your collection of your favourite music .</p>
+                                </div>
+                          </div>
+                          </div>
+                    </div>
+                    </div>
+                  <div class="col">
+                  <div class="card w-100 h-100 cardVertical ">
+                          <img src="assets/mindfulness.jpg" class="card-img-top" style=" box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"  alt="...">
+                      <div class="Verticalcard-body">
+                          <h6 class=" text-left card-title pt-3">Mindfulness</h6>
+                          <p style="font-size: smaller;" class="text-left text-muted cardText card-text">Connect with your inner self.</p>
+                      </div>
+                  </div>
+                    </div>
+                  <div class="col">
+                <div class="card w-100 h-100 cardVertical ">
+                        <img src="assets/opeth.jpg" class="card-img-top" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"  alt="...">
+                    <div class="Verticalcard-body">
+                        <h6 class="text-left card-title pt-3">Opeth</h6>
+                        <p style="font-size: smaller;" class="text-left text-muted card-text">Bring me the Horizon</p>
+                    </div>
+                </div>
+                    </div>
+                  <div class="col">
+              <div class="card w-100 h-100 cardVertical ">
+                      <img src="assets/nymphetamin.jpg" class="card-img-top" style=" box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"  alt="...">
+                  <div class="Verticalcard-body">
+                      <h6 class="text-left card-title pt-3">Nymphetamin</h6>
+                      <p style="font-size: smaller;" class="text-muted cardText card-text">This is porbably aome heavy s***</p>
+                  </div>
+              </div>
+                    </div>
+                  <div class="col">
+            <div class="card w-100 h-100 cardVertical ">
+                    <img src="assets/locanda.jpg" class="card-img-top" style=" box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"  alt="...">
+                <div class="Verticalcard-body">
+                    <h6 class="text-left card-title p">Locanda</h6>
+                    <p style="font-size: smaller;" class="text-muted text-left cardText card-text">The one and only Locanda.</p>
+                </div>
+            </div>
+                    </div>
+                  <div class="col">
+          <div class="card w-100 h-100 cardVertical ">
+                  <img src="assets/metalBallads.jpg" class="card-img-top" style=" box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"  alt="...">
+              <div class="Verticalcard-body">
+                  <h6 class="text-left card-title pt-3">MetalBallads</h6>
+                  <p style="font-size: smaller;"class="text-muted text-left card-text">The Collection of best MetalBallads</p>
+              </div>
+          </div>
+                    </div>
+                </div>
+              </div>
+              <div class="collapse pt-3" id="RecentCollapse">
+                <div class="container-xl d-flex flex-row ml-1" style="padding: 0px;" id="verticalCards">
+                  <div class="row row-cols-sm-2 row-cols-xs-1 row-cols-md-3 row-cols-lg-6">
+                    <div class="col">
+                      <div class="card w-100 h-100 cardVertical ">
+                              <img src="assets/postHuman.jpg" class="card-img-top"  alt="...">
+                          <div class="card-body">
+                              <h6 class="card-title">Post Human</h6>
+                              <p class="cardText card-text"></p>
+                          </div>
+                      </div>
+                   </div>
+                    <div class="col">
+                    <div class="card w-100 h-100 cardVertical ">
+                        <img src="assets/powerPizza.jpg" class="card-img-top"  alt="...">
+                    <div class="card-body">
+                        <h6 class="card-title">Power Pizza</h6>
+                        <p class="cardText card-text"></p>
+                    </div>
+                    
+                  
+                 
+                </div>
+                    </div>
+                    <div class="col">
+                     <div class="card w-100 h-100 cardVertical ">
+                          <img src="assets/queiDue.jpg" class="card-img-top"  alt="...">
+                      <div class="card-body">
+                          <h6 class="card-title">Quei Due</h6>
+                          <p class="cardText card-text"></p>
+                      </div>
+                   </div>
+                    </div>
+                    <div class="col">
+                      <div class="card w-100 h-100 cardVertical ">
+                           <img src="assets/leBask.jpg" class="card-img-top"  alt="...">
+                       <div class="card-body">
+                           <h6 class="card-title">Le Bask</h6>
+                           <p class="cardText card-text"></p>
+                       </div>
+                   </div>
+                     </div>
+                     <div class="col">
+                      <div class="card w-100 h-100 cardVertical ">
+                           <img src="assets/thisIsJoeBonamassa.jpg" class="card-img-top"  alt="...">
+                       <div class="card-body">
+                           <h6 class="card-title">Joe Bona6assa</h6>
+                           <p class="cardText card-text"></p>
+                       </div>
+                   </div>
+                     </div>
+                     <div class="col">
+                      <div class="card w-100 h-100 cardVertical ">
+                           <img src="assets/bohemianRapsody.jpg" class="card-img-top"  alt="...">
+                       <div class="card-body">
+                           <h6 class="card-title">Queen</h6>
+                           <p class="cardText card-text"></p>
+                       </div>
+                       
+                     
+                    
+                   </div>
+                     </div>
+                  </div>
+  
+                </div>
+              </div>
+
+              <div class="d-flex justify-content-between pt-5">
+                <h5 class="text-left text-white ml-1 ">Shows to try</h5>
+                <a class="text-white" data-toggle="collapse" href="#ToTryCollapse" role="button" aria-expanded="false" aria-controls="collapseExample">
+                  See all
+                </a>
+              </div>
+              <div><p class="text-white">Podcasts we think you'll get hooked on.</p></div>
+              <div class="container-xl d-flex flex-row ml-1" style="padding: 0px;" id="verticalCards">
+                <div class="row row-cols-sm-2 row--cols-xs-1 row-cols-md-3 row-cols-lg-6">
+                  <div class="col">
+                    <div class="card w-100 h-100 cardVertical ">
+                            <img src="assets/bohemianRapsody.jpg" class="card-img-top" style="border-radius: 15%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"  alt="...">
+                        <div class="card-body">
+                            <h6 class="card-title">Queen</h6>
+                            <p class="cardText card-text"></p>
+                        </div>
+                    </div>
+                 </div>
+                  <div class="col">
+                  <div class="card w-100 h-100 cardVertical ">
+                      <img src="assets/powerPizza.jpg" class="card-img-top" style="border-radius: 15%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)" alt="...">
+                  <div class="card-body">
+                      <h6 class="text-left card-title">PowerPizza</h6>
+                      <p class="cardText card-text"></p>
+                  </div>
+              </div>
+                  </div>
+                  <div class="col">
+                   <div class="card w-100 h-100 cardVertical ">
+                        <img src="assets/mitologia.jpg" class="card-img-top" style="border-radius: 15%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)" alt="...">
+                    <div class="card-body">
+                        <h6 class="text-left card-title">Mitologia</h6>
+                        <p class="cardText card-text"></p>
+                    </div>
+                    
+                  
+                 
+                </div>
+                  </div>
+                  <div class="col">
+                    <div class="card w-100 h-100 cardVertical ">
+                         <img src="assets/Burning Jazz-rock.....jpg" class="card-img-top" style="border-radius: 15%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)" alt="...">
+                     <div class="card-body">
+                         <h6 class="text-left card-title">Burning Jazz-rock</h6>
+                         <p class="cardText card-text"></p>
+                     </div>
+                     
+                   
+                  
+                 </div>
+                   </div>
+                   <div class="col">
+                    <div class="card w-100 h-100 cardVertical ">
+                           <img src="assets/alessandroBarbero.jpg" class="card-img-top" style="border-radius: 15%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)" alt="...">
+                        <div class="card-body">
+                            <h6 class="card-title">AlessandroBarbero</h6>
+                            <p class="cardText card-text"></p>
+                        </div>
+                    </div>
+                    </div>
+                   <div class="col">
+                    <div class="card w-100 h-100 cardVertical ">
+                         <img src="assets/leBask.jpg" class="card-img-top" style="border-radius: 15%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)" alt="...">
+                     <div class="card-body">
+                         <h6 class="text-left card-title">LeBask</h6>
+                         <p class="cardText card-text"></p>
+                     </div>
+                 </div>
+                   </div>
+                </div>
+
+              </div>
+                
+                <div class="collapse pt-3" id="ToTryCollapse">
+                  <div class="container-xl d-flex flex-row ml-1" style="padding: 0px;" id="verticalCards">
+                    <div class="row row-cols-sm-2 row--cols-xs-1 row-cols-md-3 row-cols-lg-6">
+                      <div class="col">
+                        <div class="card w-100 h-100 cardVertical ">
+                                <img src="assets/locanda.jpg" class="card-img-top rounded" style="border-radius: 15%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)" alt="...">
+                            <div class="card-body">
+                                <h6 class="card-title">Locanda</h5>
+  6                             <p class="cardText card-text"></p>
+                            </div>
+                        </div>
+                     </div>
+                      <div class="col">
+                      <div class="card w-100 h-100 cardVertical ">
+                          <img src="assets/queenImage.jpg" class="card-img-top rounded" style="border-radius: 15%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"  alt="...">
+                      <div class="card-body">
+                          <h6 class="card-title">Queen</h5>
+    6                     <p class="cardText card-text"></p>
+                      </div>
+                      
+                    
+                   
+                  </div>
+                      </div>
+                      <div class="col">
+                       <div class="card w-100 h-100 cardVertical ">
+                            <img src="assets/demoniUrbani.jpg" class="card-img-top rounded" style="border-radius: 15%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)" alt="...">
+                        <div class="card-body">
+                            <h6 class="card-title">Demoni Urban</h6>
+                            <p class="cardText card-text"></p>
+                        </div>
+                        
+                      
+                     
+                    </div>
+                      </div>
+                      <div class="col">
+                        <div class="card w-100 h-100 cardVertical ">
+                             <img src="assets/bohemianRapsody.jpg" class="card-img-top rounded" style="border-radius: 15%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)" alt="...">
+                         <div class="card-body">
+                             <h6 class="card-title">Queen</h5>
+    6                        <p class="cardText card-text"></p>
+                         </div>
+                     </div>
+                       </div>
+                       <div class="col">
+                        <div class="card w-100 h-100 cardVertical ">
+                             <img src="assets/dailyCogito.jpg" class="card-img-top rounded" style="border-radius: 15%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)" alt="...">
+                         <div class="card-body">
+                             <h6 class="card-title">Daily Cogito</h6>
+                             <p class="cardText card-text"></p>
+                         </div>
+                         
+                       
+                      
+                     </div>
+                       </div>
+                       <div class="col">
+                        <div class="card w-100 h-100 cardVertical ">
+                             <img src="assets/amo.jpg" class="rounded card-img-top " style="border-radius: 15%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"  alt="...">
+                         <div class="card-body">
+                             <h6 class="card-title">Burning Love</h6>
+                             <p class="cardText card-text"></p>
+                         </div>
+                         
+                       
+                      
+                     </div>
+                       </div>
+                    </div>
+    
+                  </div>
+                </div>
+
+            </div>
+        </div>
+      </div> 
+    </div>    
+    
+    <div id="player" class="container-fluid fixed-bottom text-white">
+      <div class="row">
+        <div class="col-4 d-flex">
+          <div class="d-flex">
+            <div class="player-album-image-container">
+            <img id="player-album-image" src="/assets/queenImage.jpg" alt="queen">
+          </div>
+          <div class="ml-2">
+            <p class="player-album">
+              Another One Bites The Dust - Remastered 2011
+            </p>
+            <p class= player-artist>
+              Queen
+            </p>
+          </div>
+          <div class="icons-player-album">
+            <i class="bi bi-heart icon-size-player"></i>
+            <i class="bi bi-laptop icon-size-player ml-3"></i>
+          </div>
+          </div>
+        </div>
+        <div class="col-4 d-flex player-column justify-content-center">
+          <div class="timeline-time">
+            <p>0:12</p>
+          </div>
+          <div class="player-width">
+          <div class="icons-player-middle">
+            <i class="bi bi-shuffle icon-size-player ml-2 pt-2"></i>
+            <i class="bi bi-skip-start-fill icon-size-player ml-3 pt-2"></i>
+            <i class="bi bi-play-circle-fill ml-3 mb-2" style="font-size: 1.2rem"></i>
+            <i class="bi bi-skip-end-fill icon-size-player ml-3 pt-2"></i>
+            <i class="bi bi-arrow-repeat icon-size-player ml-3 pt-2"></i> 
+          </div>
+          <div id="musicBarContainer">
+            <div id="timeline">
+                <div id="progress" style="margin-left: 0px;">
+            </div>
+          </div>        
+          </div>
+         </div>
+        <div class="timeline-time">
+          <p>3:34</p>
+        </div>
+      </div>
+        <div class="col-4 d-flex justify-content-end">
+
+          <div class="icons-player-right">
+            <i class="bi bi-music-note-list icon-size-player"></i>
+            <i class="bi bi-laptop icon-size-player ml-3"></i>
+            <i class="bi bi-volume-up icon-size-player ml-3"></i>
+            <div id="volume"></div>
+          </div>
+        </div>
+    </div>
+    </div>
+
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="home.js"></script>
+  </body>
+</html>
