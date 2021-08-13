@@ -93,12 +93,12 @@ const apiDataThree = async () => {
                     </div>`;
   }
 };
-let field;
+let inputValue;
 const handlesearch = (e) => {
-  field = e.target.value.toLowerCase();
+  inputValue = e.target.value.toLowerCase();
 };
-const loadsearchImages = (query) => {
-  fetching(query);
+const loadsearchImages = (str) => {
+  fetching(str);
 };
 const fetching = async (str) => {
   fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${str}`)
@@ -110,7 +110,11 @@ const fetching = async (str) => {
     });
 };
 const loadsongs = (arr) => {
+  let section = document.getElementById("greet");
   if (row !== null) {
+    section.innerText = "";
+    section.innerHTML += "Search reaults...";
+
     row.innerHTML = "";
     let song = arr;
     for (s of song) {

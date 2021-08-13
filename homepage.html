@@ -100,7 +100,7 @@
                         <button class="btn navbarButtons d-flex justify-content-center align-items-center disabled"><i class="bi bi-chevron-right"></i></button>
                         <br>
                         <input oninput="handlesearch(event)" type="text">
-                        <input onclick="loadsearchImages(field)" type="button">
+                        <input onclick="loadsearchImages(inputValue)" type="button">
                     </div>
                     <button class="btn nav-item dropdown">                    
                         <a class="pl-1 nav-link dropdown-toggle d-flex align-items-center navbarDropdown" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -115,7 +115,7 @@
                         </div>
                     </button>
                 </div>
-            </nav>
+    </nav>
             <div class="container-xl page-content" id="pageBodyHome">
               <h3 id=greet class="text-left text-white ml-1 py-3"></h3>
               <div class="container ml-1" style="padding: 0px;" id="horizontal cards">
@@ -140,66 +140,8 @@
               <div class="collapse pt-3" id="RecentCollapse">
                 <div class="container-xl d-flex flex-row ml-1" style="padding: 0px;" id="verticalCards">
                   <div class="row row-cols-sm-2 row-cols-xs-1 row-cols-md-3 row-cols-lg-6">
-                    <div class="col">
-                      <div class="card w-100 h-100 cardVertical ">
-                              <img src="assets/postHuman.jpg" class="card-img-top"  alt="...">
-                          <div class="card-body">
-                              <h6 class="card-title">Post Human</h6>
-                              <p class="cardText card-text"></p>
-                          </div>
-                      </div>
-                   </div>
-                    <div class="col">
-                    <div class="card w-100 h-100 cardVertical ">
-                        <img src="assets/powerPizza.jpg" class="card-img-top"  alt="...">
-                    <div class="card-body">
-                        <h6 class="card-title">Power Pizza</h6>
-                        <p class="cardText card-text"></p>
-                    </div>
                     
-                  
-                 
-                </div>
-                    </div>
-                    <div class="col">
-                     <div class="card w-100 h-100 cardVertical ">
-                          <img src="assets/queiDue.jpg" class="card-img-top"  alt="...">
-                      <div class="card-body">
-                          <h6 class="card-title">Quei Due</h6>
-                          <p class="cardText card-text"></p>
-                      </div>
-                   </div>
-                    </div>
-                    <div class="col">
-                      <div class="card w-100 h-100 cardVertical ">
-                           <img src="assets/leBask.jpg" class="card-img-top"  alt="...">
-                       <div class="card-body">
-                           <h6 class="card-title">Le Bask</h6>
-                           <p class="cardText card-text"></p>
-                       </div>
-                   </div>
-                     </div>
-                     <div class="col">
-                      <div class="card w-100 h-100 cardVertical ">
-                           <img src="assets/thisIsJoeBonamassa.jpg" class="card-img-top"  alt="...">
-                       <div class="card-body">
-                           <h6 class="card-title">Joe Bona6assa</h6>
-                           <p class="cardText card-text"></p>
-                       </div>
-                   </div>
-                     </div>
-                     <div class="col">
-                      <div class="card w-100 h-100 cardVertical ">
-                           <img src="assets/bohemianRapsody.jpg" class="card-img-top"  alt="...">
-                       <div class="card-body">
-                           <h6 class="card-title">Queen</h6>
-                           <p class="cardText card-text"></p>
-                       </div>
-                       
-                     
-                    
-                   </div>
-                     </div>
+                         
                   </div>
   
                 </div>
@@ -214,144 +156,9 @@
               <div><p class="text-white">Podcasts we think you'll get hooked on.</p></div>
               <div class="container-xl d-flex flex-row ml-1" style="padding: 0px;" id="verticalCards">
                 <div id="songs-3" class="row row-cols-sm-2 row--cols-xs-1 row-cols-md-3 row-cols-lg-6">
-                  <div class="col">
-                    <div class="card w-100 h-100 cardVertical ">
-                            <img src="assets/bohemianRapsody.jpg" class="card-img-top" style="border-radius: 15%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"  alt="...">
-                        <div class="card-body">
-                            <h6 class="card-title">Queen</h6>
-                            <p class="cardText card-text"></p>
-                        </div>
-                    </div>
-                 </div>
-                  <div class="col">
-                  <div class="card w-100 h-100 cardVertical ">
-                      <img src="assets/powerPizza.jpg" class="card-img-top" style="border-radius: 15%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)" alt="...">
-                  <div class="card-body">
-                      <h6 class="text-left card-title">PowerPizza</h6>
-                      <p class="cardText card-text"></p>
-                  </div>
-              </div>
-                  </div>
-                  <div class="col">
-                   <div class="card w-100 h-100 cardVertical ">
-                        <img src="assets/mitologia.jpg" class="card-img-top" style="border-radius: 15%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)" alt="...">
-                    <div class="card-body">
-                        <h6 class="text-left card-title">Mitologia</h6>
-                        <p class="cardText card-text"></p>
-                    </div>
-                    
-                  
-                 
-                </div>
-                  </div>
-                  <div class="col">
-                    <div class="card w-100 h-100 cardVertical ">
-                         <img src="assets/Burning Jazz-rock.....jpg" class="card-img-top" style="border-radius: 15%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)" alt="...">
-                     <div class="card-body">
-                         <h6 class="text-left card-title">Burning Jazz-rock</h6>
-                         <p class="cardText card-text"></p>
-                     </div>
-                     
-                   
-                  
-                 </div>
-                   </div>
-                   <div class="col">
-                    <div class="card w-100 h-100 cardVertical ">
-                           <img src="assets/alessandroBarbero.jpg" class="card-img-top" style="border-radius: 15%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)" alt="...">
-                        <div class="card-body">
-                            <h6 class="card-title">AlessandroBarbero</h6>
-                            <p class="cardText card-text"></p>
-                        </div>
-                    </div>
-                    </div>
-                   <div class="col">
-                    <div class="card w-100 h-100 cardVertical ">
-                         <img src="assets/leBask.jpg" class="card-img-top" style="border-radius: 15%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)" alt="...">
-                     <div class="card-body">
-                         <h6 class="text-left card-title">LeBask</h6>
-                         <p class="cardText card-text"></p>
-                     </div>
-                 </div>
-                   </div>
-                </div>
 
-              </div>
-                
-                <div class="collapse pt-3" id="ToTryCollapse">
-                  <div class="container-xl d-flex flex-row ml-1" style="padding: 0px;" id="verticalCards">
-                    <div class="row row-cols-sm-2 row--cols-xs-1 row-cols-md-3 row-cols-lg-6">
-                      <div class="col">
-                        <div class="card w-100 h-100 cardVertical ">
-                                <img src="assets/locanda.jpg" class="card-img-top rounded" style="border-radius: 15%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)" alt="...">
-                            <div class="card-body">
-                                <h6 class="card-title">Locanda</h5>
-  6                             <p class="cardText card-text"></p>
-                            </div>
-                        </div>
-                     </div>
-                      <div class="col">
-                      <div class="card w-100 h-100 cardVertical ">
-                          <img src="assets/queenImage.jpg" class="card-img-top rounded" style="border-radius: 15%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"  alt="...">
-                      <div class="card-body">
-                          <h6 class="card-title">Queen</h5>
-    6                     <p class="cardText card-text"></p>
-                      </div>
-                      
-                    
-                   
-                  </div>
-                      </div>
-                      <div class="col">
-                       <div class="card w-100 h-100 cardVertical ">
-                            <img src="assets/demoniUrbani.jpg" class="card-img-top rounded" style="border-radius: 15%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)" alt="...">
-                        <div class="card-body">
-                            <h6 class="card-title">Demoni Urban</h6>
-                            <p class="cardText card-text"></p>
-                        </div>
-                        
-                      
-                     
-                    </div>
-                      </div>
-                      <div class="col">
-                        <div class="card w-100 h-100 cardVertical ">
-                             <img src="assets/bohemianRapsody.jpg" class="card-img-top rounded" style="border-radius: 15%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)" alt="...">
-                         <div class="card-body">
-                             <h6 class="card-title">Queen</h5>
-    6                        <p class="cardText card-text"></p>
-                         </div>
-                     </div>
-                       </div>
-                       <div class="col">
-                        <div class="card w-100 h-100 cardVertical ">
-                             <img src="assets/dailyCogito.jpg" class="card-img-top rounded" style="border-radius: 15%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)" alt="...">
-                         <div class="card-body">
-                             <h6 class="card-title">Daily Cogito</h6>
-                             <p class="cardText card-text"></p>
-                         </div>
-                         
-                       
-                      
-                     </div>
-                       </div>
-                       <div class="col">
-                        <div class="card w-100 h-100 cardVertical ">
-                             <img src="assets/amo.jpg" class="rounded card-img-top " style="border-radius: 15%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"  alt="...">
-                         <div class="card-body">
-                             <h6 class="card-title">Burning Love</h6>
-                             <p class="cardText card-text"></p>
-                         </div>
-                         
-                       
-                      
-                     </div>
-                       </div>
-                    </div>
-    
-                  </div>
                 </div>
-
+              </div>
             </div>
         </div>
       </div> 
