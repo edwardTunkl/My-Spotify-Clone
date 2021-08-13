@@ -311,6 +311,7 @@ div#volume {
 #navbarButtonContainer input:first-of-type:hover{
   border-color: transparent;
 }
+
 #navbarButtonContainer input:last-of-type{
   background-color: rgba(65, 38, 38, 0.863);
   border-color: transparent;
