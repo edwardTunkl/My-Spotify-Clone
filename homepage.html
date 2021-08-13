@@ -98,6 +98,9 @@
                     <div id="navbarButtonContainer" class="d-flex justify-content-between pt-1 ml-1">
                         <button class="btn navbarButtons d-flex justify-content-center align-items-center"><i class="bi bi-chevron-left"></i></button>
                         <button class="btn navbarButtons d-flex justify-content-center align-items-center disabled"><i class="bi bi-chevron-right"></i></button>
+                        <br>
+                        <input oninput="handlesearch(event)" type="text">
+                        <input type="button">
                     </div>
                     <button class="btn nav-item dropdown">                    
                         <a class="pl-1 nav-link dropdown-toggle d-flex align-items-center navbarDropdown" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -210,7 +213,7 @@
               </div>
               <div><p class="text-white">Podcasts we think you'll get hooked on.</p></div>
               <div class="container-xl d-flex flex-row ml-1" style="padding: 0px;" id="verticalCards">
-                <div class="row row-cols-sm-2 row--cols-xs-1 row-cols-md-3 row-cols-lg-6">
+                <div id="songs-3" class="row row-cols-sm-2 row--cols-xs-1 row-cols-md-3 row-cols-lg-6">
                   <div class="col">
                     <div class="card w-100 h-100 cardVertical ">
                             <img src="assets/bohemianRapsody.jpg" class="card-img-top" style="border-radius: 15%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"  alt="...">
