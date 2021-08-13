@@ -86,7 +86,7 @@ const apiDataThree = async () => {
                         <div class="card w-100 h-100 cardVertical ">
                                 <img src="${s.album.cover_medium}" style="border-radius: 15%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"  alt="...">
                             <div class="card-body">
-                                <h6 class="card-title">${s.artist.name}</h6>
+                                <a class="card-title" href="artist.html">${s.artist.name} 
                                 <p class="cardText card-text"></p>
                             </div>
                         </div>
@@ -107,12 +107,12 @@ const fetching = async (str) => {
       dataArray = songs.data;
       loadsongs(dataArray);
       //playlist(dataArray);
-      console.log(dataArray)
+      console.log(dataArray);
     });
 };
 // function playlist(dataArray) {
- // let _dataArray = dataArray;
- // console.log(songs.data.duration);
+// let _dataArray = dataArray;
+// console.log(songs.data.duration);
 //}
 const loadsongs = (arr) => {
   if (row !== null) {
@@ -123,8 +123,8 @@ const loadsongs = (arr) => {
                           <div class="card w-100 h-100 cardVertical ">
                                   <img src="${s.album.cover_medium}" style="border-radius: 15%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"  alt="...">
                               <div class="card-body">
-                                  <h6 class="card-title">${s.artist.name}</h6>
-                                  <p class="cardText card-text">${s.album.title}</p>
+                              <a class="card-title" href="artist.html">${s.artist.name}</a>
+                                  <a class="cardText card-text" href="album.html">${s.album.title}</a>
                               </div>
                           </div>
                       </div>`;
