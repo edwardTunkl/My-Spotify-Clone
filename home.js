@@ -19,20 +19,20 @@ url = "https://striveschool-api.herokuapp.com/api/deezer/search?q=akon";
 row = document.getElementById("songs");
 url2 = "https://striveschool-api.herokuapp.com/api/deezer/search?q=queen";
 row2 = document.getElementById("songs-2");
-url3 = "https://striveschool-api.herokuapp.com/api/deezer/search?q=queen";
+url3 = "https://striveschool-api.herokuapp.com/api/deezer/search?q=Drake";
 row3 = document.getElementById("songs-3");
 const apiData = async () => {
   let data = await fetch(url);
   let songs = await data.json();
-  console.log("apiData--->", songs);
+  //console.log("apiData--->", songs);
   let song = songs.data;
   let songsArray = [];
   songsArray.push(song);
-  console.log("array", songsArray);
+  //console.log("array", songsArray);
 
-  console.log("sdkcbsdkjv:", songsArray);
+  //console.log("sdkcbsdkjv:", songsArray);
 
-  console.log("song dat---->", song);
+  //console.log("song dat---->", song);
   for (s of song) {
     row.innerHTML += `<div class="col ">
                     <div class="mb-3">
@@ -55,7 +55,7 @@ const apiData = async () => {
 const apiDataTwo = async () => {
   let data = await fetch(url2);
   let songs = await data.json();
-  console.log(songs.data);
+  //console.log(songs.data);
   let song = songs.data;
   for (s of song) {
     row2.innerHTML += `<div class="col">
@@ -79,7 +79,7 @@ const apiDataTwo = async () => {
 const apiDataThree = async () => {
   let data = await fetch(url3);
   let songs = await data.json();
-  console.log(songs.data);
+  console.log("section-3", songs.data);
   let song = songs.data;
   for (s of song) {
     row3.innerHTML += `<div class="col">
