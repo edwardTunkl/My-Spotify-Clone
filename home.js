@@ -93,7 +93,39 @@ const apiDataThree = async () => {
                     </div>`;
   }
 };
+let field;
+const handlesearch = (e) => {
+  field = e.target.value.toLowerCase();
+};
+const loadsearchImages = (query) => {
+  fetching(query);
+};
+const fetching = async (str) => {
+  fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${str}`)
+    .then((response) => response.json())
+    .then((songs) => {
+      dataArray = songs.data;
 
+      loadsongs(dataArray);
+    });
+};
+const loadsongs = (arr) => {
+  if (row !== null) {
+    row.innerHTML = "";
+    let song = arr;
+    for (s of song) {
+      row.innerHTML += `<div class="col">
+                          <div class="card w-100 h-100 cardVertical ">
+                                  <img src="${s.album.cover_medium}" style="border-radius: 15%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"  alt="...">
+                              <div class="card-body">
+                                  <h6 class="card-title">${s.artist.name}</h6>
+                                  <p class="cardText card-text">${s.album.title}</p>
+                              </div>
+                          </div>
+                      </div>`;
+    }
+  }
+};
 window.onload = () => {
   apiData();
   apiDataTwo();
