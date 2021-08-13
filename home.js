@@ -24,7 +24,7 @@ row3 = document.getElementById("songs-3");
 const apiData = async () => {
   let data = await fetch(url);
   let songs = await data.json();
-  //console.log("apiData--->", songs);
+  console.log("apiData--->", songs);
   let song = songs.data;
   let songsArray = [];
   songsArray.push(song);
@@ -105,10 +105,15 @@ const fetching = async (str) => {
     .then((response) => response.json())
     .then((songs) => {
       dataArray = songs.data;
-
       loadsongs(dataArray);
+      //playlist(dataArray);
+      console.log(dataArray)
     });
 };
+// function playlist(dataArray) {
+ // let _dataArray = dataArray;
+ // console.log(songs.data.duration);
+//}
 const loadsongs = (arr) => {
   if (row !== null) {
     row.innerHTML = "";

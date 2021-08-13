@@ -18,6 +18,7 @@
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="artist.js"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
       rel="stylesheet"
@@ -26,6 +27,7 @@
     <title>Spotify Clone</title>
   </head>
   <body>
+    albumcover
     <div id="mainBody" class="d-flex px-0 mx-0">
       <div id="gradient"></div>
       <div id="sidebar" class="position-fixed px-1">
@@ -266,159 +268,8 @@
                     <th scope="col" class="text-right"></th>
                   </tr>
                 </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>
-                      <img
-                        class="d-inline"
-                        height="48px"
-                        src="/assets/AlbumCoversSmall/7.jfif"
-                        alt=""
-                      />
-                      <p class="d-inline">
-                        Another One Bites The Dust - Remastered 2011
-                      </p>
-                    </td>
-                    <td>1,013,238,882</td>
-                    <td>3:34</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>
-                      <img
-                        class="d-inline"
-                        height="48px"
-                        src="/assets/AlbumCoversSmall/6.jfif"
-                        alt=""
-                      />
-                      <p class="d-inline">
-                        Bohemian Rhapsody - Remastered 2011
-                      </p>
-                    </td>
-                    <td>1,550,515,501</td>
-                    <td>5:54</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>
-                      <img
-                        class="d-inline"
-                        height="48px"
-                        src="/assets/AlbumCoversSmall/5.jfif"
-                        alt=""
-                      />
-                      <p class="d-inline">
-                        Don't Stop me Now - Remastered 2011
-                      </p>
-                    </td>
-                    <td>1,105,840,894</td>
-                    <td>3:29</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">4</th>
-                    <td>
-                      <img
-                        class="d-inline"
-                        height="48px"
-                        src="/assets/AlbumCoversSmall/4.jfif"
-                        alt=""
-                      />
-                      <p class="d-inline">Under Pressure - Remastered 2011</p>
-                    </td>
-                    <td>940,756,684</td>
-                    <td>4:08</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">5</th>
-                    <td>
-                      <img
-                        class="d-inline"
-                        height="48px"
-                        src="/assets/AlbumCoversSmall/3.jfif"
-                        alt=""
-                      />
-                      <p class="d-inline">We Will Rock You - Remastered 2011</p>
-                    </td>
-                    <td>734,167,838</td>
-                    <td>2:02</td>
-                  </tr>
-                  <tr class="collapse multi-collapse" id="multiCollapse1">
-                    <th scope="row">6</th>
-                    <td>
-                      <img
-                        class="d-inline"
-                        height="48px"
-                        src="/assets/AlbumCoversSmall/3.jfif"
-                        alt=""
-                      />
-                      <p class="d-inline">
-                        We Are The Champions - Remastered 2011
-                      </p>
-                    </td>
-                    <td>427,976,397</td>
-                    <td>2:59</td>
-                  </tr>
-                  <tr class="collapse multi-collapse" id="multiCollapse2">
-                    <th scope="row">7</th>
-                    <td>
-                      <img
-                        class="d-inline"
-                        height="48px"
-                        src="/assets/AlbumCoversSmall/2.jfif"
-                        alt=""
-                      />
-                      <p class="d-inline">
-                        I want To Break Free - Single Remix
-                      </p>
-                    </td>
-                    <td>380,726,765</td>
-                    <td>4:18</td>
-                  </tr>
-                  <tr class="collapse multi-collapse" id="multiCollapse3">
-                    <th scope="row">8</th>
-                    <td>
-                      <img
-                        class="d-inline"
-                        height="48px"
-                        src="/assets/AlbumCoversSmall/7.jfif"
-                        alt=""
-                      />
-                      <p class="d-inline">
-                        Crazy Little Thing Called Love - Remastered 2011
-                      </p>
-                    </td>
-                    <td>374,219,057</td>
-                    <td>2:43</td>
-                  </tr>
-                  <tr class="collapse multi-collapse" id="multiCollapse4">
-                    <th scope="row">9</th>
-                    <td>
-                      <img
-                        class="d-inline"
-                        height="48px"
-                        src="/assets/AlbumCoversSmall/2.jfif"
-                        alt=""
-                      />
-                      <p class="d-inline">Radio Ga Ga - Remastered 2011</p>
-                    </td>
-                    <td>318,507,559</td>
-                    <td>5:48</td>
-                  </tr>
-                  <tr class="collapse multi-collapse" id="multiCollapse5">
-                    <th scope="row">10</th>
-                    <td>
-                      <img
-                        class="d-inline"
-                        height="48px"
-                        src="/assets/AlbumCoversSmall/1.jfif"
-                        alt=""
-                      />
-                      <p class="d-inline">Somebody To Love - Remastered 2011</p>
-                    </td>
-                    <td>558,120,177</td>
-                    <td>4:56</td>
-                  </tr>
+                <tbody id="tbdoy">
+          
                 </tbody>
               </table>
               <button
