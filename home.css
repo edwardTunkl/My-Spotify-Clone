@@ -297,3 +297,31 @@ div#volume {
   border-bottom-right-radius: 6px;
   border-bottom-left-radius: 6px;
 }
+
+
+/* styling the input bar */
+#navbarButtonContainer input:first-of-type {
+  background-color: rgba(65, 38, 38, 0.863);
+  border-color: transparent;
+  color: white;
+  border-radius: 20px;
+  height: 35px;
+  margin-left: 100px;
+}
+#navbarButtonContainer input:last-of-type{
+  background-color: rgba(65, 38, 38, 0.863);
+  border-color: transparent;
+  color: white;
+  border-radius: 20px;
+  height: 35px;
+  margin-left: 10px;
+  background-image: url(https://img.icons8.com/material-rounded/24/ffffff/search.png);
+  background-repeat: no-repeat;
+  width: 40px;
+  background-position-y: center;
+  background-position-x: center;
+}
+#navbarButtonContainer input:first-of-type::placeholder {
+  color: rgba(255, 253, 253, 0.74);
+  text-align: center;
+}
