@@ -308,6 +308,9 @@ div#volume {
   height: 35px;
   margin-left: 100px;
 }
+#navbarButtonContainer input:first-of-type:hover{
+  border-color: transparent;
+}
 #navbarButtonContainer input:last-of-type{
   background-color: rgba(65, 38, 38, 0.863);
   border-color: transparent;
@@ -320,6 +323,7 @@ div#volume {
   width: 40px;
   background-position-y: center;
   background-position-x: center;
+  
 }
 #navbarButtonContainer input:first-of-type::placeholder {
   color: rgba(255, 253, 253, 0.74);
