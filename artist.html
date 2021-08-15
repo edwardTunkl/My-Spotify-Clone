@@ -27,7 +27,7 @@
     <title>Spotify Clone</title>
   </head>
   <body>
-    albumcover
+    
     <div id="mainBody" class="d-flex px-0 mx-0">
       <div id="gradient"></div>
       <div id="sidebar" class="position-fixed px-1">
@@ -318,9 +318,9 @@
                     class="col-12 d-flex mx-n2 justify-content-between"
                     style="padding-right: 4vw"
                   >
-                    <p>Popular Releases</p>
-                    <p>See All</p>
-                  </div>
+                  <p>Popular Releases</p>
+                </div>
+                  
                   <div
                     class="card col-12 col-sm-6 col-md-4 col-lg-2 mx-2 mb-2"
                     style="max-width: 200px"
@@ -482,6 +482,7 @@
                       <p class="card-text text-muted pt-4">2015 · Album</p>
                     </div>
                   </div>
+                
                 </div>
               </div>
               <div class="col-12 mt-3">
@@ -727,6 +728,84 @@
           currentlySelectedItem.classList.remove("selctedSidebarItem");
           event.target.classList.add("selctedSidebarItem");
         };
+
+        window.onload = () => {
+
+        const newArtistImage = document.querySelector("#queenContainer")
+          console.log(newArtistImage)
+        const newImage = document.querySelector("#navbar-pagecontent")
+
+        const newPopular = document.querySelector(".popular")
+
+        const query = new URLSearchParams(document.location.search).get("artistId")
+
+        fetch("https://striveschool-api.herokuapp.com/api/deezer/artist/" + query)
+        .then(res => res.json())
+        .then(artistData => {
+          console.log(artistData)
+
+          const newArtist = `
+                <div id="queenContainer" class="col-12 text-white">
+                    <img
+                      src=""
+                      class="d-inline"
+                      width="16px"
+                      alt=""
+                    />
+                    <div class="d-inline">Verified Artist</div>
+                    <div class="d-flex align-middle">
+                      <p
+                        style="
+                          font-size: 128px;
+                          font-weight: 700;
+                          line-height: 128px;
+                          padding-bottom: 16px;
+                          margin: 0;
+                        "
+                      >
+                        ${artistData.name}
+                      </p>
+                    </div>
+                    <div>37,120,733 monthly listeners</div>
+                  </div>
+          `
+              newArtistImage.innerHTML=newArtist
+            
+              
+              newImage.style.backgroundImage = artistData.picture_xl
+
+
+
+              // newPopular.innerHTML = ""
+                
+              // // for (a of )
+
+              // <div
+              //       class="card col-12 col-sm-6 col-md-4 col-lg-2 mx-2 mb-2"
+              //       style="max-width: 200px"
+              //     >
+              //       <img
+              //         class="card-img-top"
+              //         src="/assets/AlbumCoversSmall/7.jfif"
+              //         alt="Card image cap"
+              //       />
+              //       <div class="card-body px-0 pb-0">
+              //         <p class="card-text text-white">
+              //           The Game <br />
+              //           (2011 Remastered)
+              //         </p>
+              //         <p class="card-text text-muted">1980 · Album</p>
+              //       </div>
+              //     </div>
+
+    })
+    .catch(err => console.log(err))
+
+        }        
+
+
+
+
       </script>
       <script
         src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

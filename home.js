@@ -15,6 +15,7 @@ const changeSidebarSelected = function (event) {
   event.target.classList.add("selctedSidebarItem");
 };
 
+
 url = "https://striveschool-api.herokuapp.com/api/deezer/search?q=akon";
 row = document.getElementById("songs");
 url2 = "https://striveschool-api.herokuapp.com/api/deezer/search?q=queen";
@@ -93,6 +94,8 @@ const apiDataThree = async () => {
                     </div>`;
   }
 };
+
+
 let inputValue;
 const handlesearch = (e) => {
   inputValue = e.target.value.toLowerCase();
@@ -118,7 +121,7 @@ const loadsongs = (arr) => {
   let section = document.getElementById("greet");
   if (row !== null) {
     section.innerText = "";
-    section.innerHTML += "Search reaults...";
+    section.innerHTML += "Search resaults...";
 
     row.innerHTML = "";
     let song = arr;
@@ -127,8 +130,9 @@ const loadsongs = (arr) => {
                           <div class="card w-100 h-100 cardVertical ">
                                   <img src="${s.album.cover_medium}" style="border-radius: 15%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"  alt="...">
                               <div class="card-body">
-                              <a class="card-title" href="artist.html">${s.artist.name}</a>
-                                  <a class="cardText card-text" href="album.html">${s.album.title}</a>
+                              <a class="card-title" href="artist.html?artistId=${s.artist.id}">${s.artist.name}</a>
+                              <br>
+                                  <a class="cardText card-text" href="album.html?albumId=${s.album.id}">${s.album.title}</a>
                               </div>
                           </div>
                       </div>`;
@@ -140,3 +144,6 @@ window.onload = () => {
   apiDataTwo();
   apiDataThree();
 };
+
+
+
