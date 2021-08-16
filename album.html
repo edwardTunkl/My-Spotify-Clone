@@ -587,7 +587,7 @@
     </div>
 <script>
 
-  let getImageFromFetch = ""
+  let getImageFromFetch
 
 function changePlayer(event) {
 
@@ -604,6 +604,12 @@ function changePlayer(event) {
   console.log(titleText.innerHTML)
   let changeToNewText = document.querySelector("#player .player-album")
   changeToNewText.innerHTML = titleText.innerHTML
+
+  let artistText = event.target.querySelector(".title-row .d-flex-column .artistText p")
+  console.log("this is artistText",artistText)
+
+  let changeToNewArtist = document.querySelector("#player .player-artist")
+  changeToNewArtist.innerHTML = artistText.innerHTML
 
  }
 
@@ -740,13 +746,13 @@ const changeSidebarSelected = function(event){
 
       `<div class=" title-row d-flex" onclick="changePlayer(event)" onmouseenter="mouseOver(event)" onmouseleave="mouseLeft(event)">
                   <div class="d-flex ml-2 mr-3 text-white-50 align-items-center">
-                    <h6>${songData.indexOf(a)}</h6>
+                    <h6>${1+ songData.indexOf(a)}</h6>
                   </div>
                   <div class="d-flex-column">
                     <div>
                       <p class="title-font">${a.title}</p>
                     </div>
-                    <div>
+                    <div class="artistText" >
                       <p class="artist-font">${a.artist.name}</p>
                     </div>
                   </div>
