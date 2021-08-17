@@ -585,6 +585,10 @@
         </div>
     </div>
     </div>
+    <br>
+    <br>
+    
+    
 <script>
 
   let getImageFromFetch
@@ -726,7 +730,7 @@ const changeSidebarSelected = function(event){
                       <img id="queenIcon" src="${albumData.artist.picture} " alt="QueenIcon">
                     </div>
                     <div class="d-flex align-items-center ml-1 pt-1">
-                      <h5>${albumData.artist.name} <span class="span">• ${albumData.release_date} • ${albumData.tracks.data.length} songs, ${albumData.duration} </span></h5>
+                      <h5><a href="artist.html?artistId=${albumData.artist.id}">${albumData.artist.name}</a> <span class="span">• ${albumData.release_date} • ${albumData.tracks.data.length} songs, ${albumData.duration} </span></h5>
                     </div>
                   </div>
                 </div>

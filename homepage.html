@@ -22,7 +22,7 @@
                 </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" onclick="changeSidebarSelected(event)" href="#">
+              <a class="nav-link" onclick="changeSidebarSelected(event); displaySearch()" href="#">
                 <div class="d-flex sidebarContainer">
                   <div class="sideBarIconContainer"><i class="bi bi-search"></i></div>
                   <h5>Search</h5>
@@ -99,7 +99,7 @@
                         <button class="btn navbarButtons d-flex justify-content-center align-items-center"><i class="bi bi-chevron-left"></i></button>
                         <button class="btn navbarButtons d-flex justify-content-center align-items-center disabled"><i class="bi bi-chevron-right"></i></button>
                         <br>
-                        <input oninput="handlesearch(event)" type="text">
+                        <input class="inputSearchfield" oninput="handlesearch(event)" type="text">
                         <input onclick="loadsearchImages(inputValue)" type="button">
                     </div>
                     <button class="btn nav-item dropdown">                    

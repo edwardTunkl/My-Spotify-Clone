@@ -136,7 +136,7 @@
           </li>
         </ul>
       </div>
-      <div id="navbar-pagecontent">
+      <div id="navbar-pagecontent" style="background-image: url(./assets/Queen-Adam-Lambert-Live-Around-The-World-Cover-Art-Image.jpg);">
         <nav class="navbar navbar-expand-lg sticky-top ml-4" id="navbarBody">
           <div
             id="navbarFlexContainer"
@@ -668,7 +668,7 @@
               <div class="player-album-image-container">
                 <img
                   id="player-album-image"
-                  src="/assets/AlbumCoversSmall/1.jfif"
+                  src="/assets/queenImage.jpg"
                   alt="queen"
                 />
               </div>
@@ -729,11 +729,16 @@
           event.target.classList.add("selctedSidebarItem");
         };
 
-        window.onload = () => {
 
-        const newArtistImage = document.querySelector("#queenContainer")
-          console.log(newArtistImage)
         const newImage = document.querySelector("#navbar-pagecontent")
+        const newArtistDiv = document.querySelector("#queenContainer") 
+
+
+        console.log("this is image", newImage.style.backgroundImage)
+ 
+
+        window.onload = () => {
+        
 
         const newPopular = document.querySelector(".popular")
 
@@ -766,13 +771,15 @@
                         ${artistData.name}
                       </p>
                     </div>
-                    <div>37,120,733 monthly listeners</div>
+                    <div>${artistData.nb_fan} fans</div>
                   </div>
-          `
-              newArtistImage.innerHTML=newArtist
+                `
+            newArtistDiv.innerHTML = newArtist     
+
+             newImage.style.backgroundImage = `url(${artistData.picture_xl} )`
             
               
-              newImage.style.backgroundImage = artistData.picture_xl
+         
 
 
 

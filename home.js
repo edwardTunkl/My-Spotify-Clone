@@ -15,6 +15,12 @@ const changeSidebarSelected = function (event) {
   event.target.classList.add("selctedSidebarItem");
 };
 
+// const displaySearch = function(){
+//   let inputField = document.querySelector(".inputSearchfield")
+//   inputField.classList.remove("d-none")
+
+
+// }
 
 url = "https://striveschool-api.herokuapp.com/api/deezer/search?q=akon";
 row = document.getElementById("songs");
@@ -96,10 +102,10 @@ const apiDataThree = async () => {
 };
 
 
-let inputValue;
-const handlesearch = (e) => {
-  inputValue = e.target.value.toLowerCase();
-};
+ let inputValue;
+ const handlesearch = (e) => {
+   inputValue = e.target.value.toLowerCase();
+ };
 const loadsearchImages = (str) => {
   fetching(str);
 };
